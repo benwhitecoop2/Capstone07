@@ -4,8 +4,6 @@
 
 | Name          | Github        | Email                       | Skype                  |
 | ------------- | ----------    | --------------------------- | ---------------------- |
-| Yumit Ismail  | y-ismail      | yismail@myseneca.ca         | umit_yumit@hotmail.com |
-| Kien Nguyen   | akitak1290    | aknguyen3@myseneca.ca       | akitak1290@gmail.com   |
 | Ben White     | benwhitecoop2 | bwhite19@myseneca.ca        | benwhitecoop@gmail.com |
 
 ## Project Idea
