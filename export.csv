@@ -1,0 +1,495 @@
+number,title,state,labels,milestone,user,assignee,assignees,created_at,updated_at,closed_at,body
+39,Quick Bugfix,closed,,Sprint 4 - BTS630,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-03-26T19:06:09Z,2021-04-09T01:25:02Z,2021-04-09T01:25:02Z,"**User Story:**
+
+This will be a purely back-end operation to fix a bug that occurred during last week's presentation.
+
+**Description:**
+
+During the last presentation, an error occurred after querying an image uploaded by the facebook module. I know exactly why this bug occurs, but since it occurred during the presentation I want to make a point of fixing it.
+
+**Deliverables:**
+- [x] Fix the module processing bug that occurred during last week's sprint review. I know why this error occurred, it's a simple fix. It's not immediately relevant to this issue, but since it is a minor fix I have included it here.
+
+**Testing Criteria:**
+
+Demonstrate that the module processing bug does not occur anymore
+"
+38,Image resizing for AWS storage,closed,,Sprint 4 - BTS630,y-ismail,y-ismail,y-ismail,2021-03-26T16:21:07Z,2021-04-08T23:13:00Z,2021-04-08T23:13:00Z,"**User Story**
+This is a purely backend operation in order to reduce file size being stored.
+
+**Description**
+The regular resizing of profile images uploaded by the user doesn't work with AWS storage, in order to keep a smaller file size the images should be resized before being saved.
+
+**Acceptance Criteria**
+A resized image stored in an AWS storage bucket.
+
+**Deliverables**
+
+- [x] A process to resize a user uploaded profile image
+
+**Testing Criteria**
+* Ensure the uploaded image is resized while also maintaining its aspect ratio."
+37,Implement the tagged page ,closed,,Sprint 4 - BTS630,y-ismail,y-ismail,y-ismail,2021-03-26T16:04:48Z,2021-04-09T16:47:11Z,2021-04-09T16:47:11Z,"**User Story**
+The user can see photos that have their face in on the tagged page.
+
+**Description**
+This will take advantage of Bens face query, there will be a request to the server to retrieve photos with the users name associated with a face and it will be displayed in the tagged page.
+
+**Deliverables**
+
+- [x] Photos of the user on the tagged page
+
+**Acceptance Criteria**
+The photos that are displayed have a face associated with the current user of the app.
+
+**Testing Criteria**
+* Make sure the image displayed has a face associated with the current user.
+* The tags on the image are displayed correctly and have correct links to user profiles."
+36,Fine-tunning the face recognition pipeline,closed,,Sprint 4 - BTS630,akitak1290,akitak1290,akitak1290,2021-03-26T15:16:50Z,2021-04-09T17:52:29Z,2021-04-09T17:52:29Z,"**User story:**
+This is a pure back-end operation and will not be related to the users.
+
+**Description:**
+The current pipeline at the moment produces a relatively low accuracy when recognizing faces. This sprint is dedicated to fine-tuning the pipeline and also adding a few filters to archive a better result.
+
+**Acceptance Criteria:**
+
+- [ ] Replace and integrate the embedding model with dlib's to improve accuracy.
+- [x] Add a new filter to detect unknown faces.
+- [x] Add a new filter to detect false-positive.
+
+"
+35,Exposing user routes & Improvements on the face querying / name modification routes,closed,,Sprint 4 - BTS630,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-03-25T20:48:56Z,2021-04-09T01:25:02Z,2021-04-09T01:25:01Z,"**User Story:**
+
+This will be a mostly back-end operation to implement the remaining required functionality regarding images and users in the database. When interfaced with the front-end, this will enable users to modify image metadata, and assign images to users.
+
+**Description:**
+
+All of the required metadata and functionality is currently provided for a user to upload an image, perform processing, and view that processed image. What remains to be done is expose this functionality to the front end, which will be done in this issue.
+
+**Deliverables:**
+- [x] Implement automatic user assignment for uploaded images
+- [x] Expose the 'face querying' route to the front end, to enable users to search images by face
+- [x] Expose the 'name modification' route to the front end, to enable users to assign names to faces
+- [x] Modify the 'face querying' route to allow batch queries (i.e. images that contain ""name1"" and ""name2"" and so on...)
+
+**Testing Criteria:**
+
+Showcase automatic user assignment when uploading images, and showcase querying images based on the user field.
+Showcase the improved face querying route 
+Showcase the name modification route
+"
+34,Front end deployment to Heroku,closed,,,y-ismail,y-ismail,y-ismail,2021-03-19T19:24:25Z,2021-04-08T21:06:17Z,2021-04-08T21:06:17Z,"**User story**
+This is a backend operation to deploy the Django application to Heroku
+
+***Description**
+The Django app will be available online through Heroku for anyone to visit.
+
+**Acceptance Criteria**
+The application being available through Heroku and having all the functionality as expected.
+
+**Deliverables**
+
+- [x] Django application on Heroku and a link to the application"
+33,Added a testing module for the facial recognition pipeline,closed,,BTS630 - Sprint 3,akitak1290,akitak1290,akitak1290,2021-03-19T16:24:53Z,2021-03-19T16:56:18Z,2021-03-19T16:56:18Z,"**User story:**
+
+This will be a pure back-end operation and will not involve any user-related activity.
+
+**Description:**
+
+Adding a test module to automate the photo processing, feature and label extracting,  training, and testing processes for multiple photos of the current facial recognition pipeline.
+
+**Acceptance Criteria:**
+- [x] Add a directory to store all the testing dataset to test the model against multiple photos.
+- [x] Have a working file processing system to add and rename new testing photos to the unified testing pool.
+- [x] Properly changing the photo file name when moving to the correct person name.
+- [x] Have logic to extract the photo file names for comparison when predicting faces.
+- [x] Document and export the result of each prediction to .csv file.
+
+**Testing:**
+
+- The model can add and process new photos added to the testing pool.
+- Photo file names are correctly extracted.
+- Properly chang the new file name to avoid collisions when moving to the testing pool.
+"
+32,Password reset,closed,,BTS630 - Sprint 3,y-ismail,y-ismail,y-ismail,2021-03-19T01:10:27Z,2021-03-19T16:44:27Z,2021-03-19T16:44:27Z,"**User Story**
+The user will be able to reset their password if they forget it.
+
+**Description**
+A link and emailing system to send emails to users in order to reset a password.
+
+**Acceptance Criteria**
+The user can reset password
+
+**Deliverables**
+
+- [x] An email available to use with the app to send the user emails
+- [x] Series of password reset routes and forms to reset a password
+"
+31,Addition of relevant image metadata to the image_data table,closed,,BTS630 - Sprint 3,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-02-26T19:24:58Z,2021-03-19T19:10:45Z,2021-03-19T18:26:42Z,"**User Story:**
+
+This will be a purely back-end operation and will not involve any user related activity. However, given the focus on metadata and information about pictures at this point in the project, this will enable users to browse and sort their images, and enable the server to parse images for datasets.
+
+**Description:**
+
+Currently, the server & database are capable of sorting images by name and hash. This is not practical for presenting images to the user, or sorting images for a new dataset. Therefore, this issue will seek to add relevant metadata to the image_data table, and add matching queries to the database to present these images. 
+
+**Deliverables:**
+- [x] Add 'user' field to image_data, add 'query by user' query
+- [x] Add nullable fields to 'image_data', such as ""people in this photo""
+- [x] Add an update route for the user to manually edit the ""image_data"" metadata
+
+**Testing Criteria:**
+
+Images can be uploaded to the database with extra metadata. Images can be retrieved from the database in sets using the extra metadata. Finally, the metadata contained within ""image_data"" can be manually edited by the user.
+"
+30,Interface the Fb/Ig modules with the database,closed,,BTS630 - Sprint 3,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-02-26T19:16:11Z,2021-03-25T20:39:57Z,2021-03-19T18:27:20Z,"**User Story:**
+
+This will be a purely back-end operation and will not involve any user related activity beyond the function of the Facebook/Instagram modules.
+
+**Description:**
+
+As we now have integrated the Facebook/Instagram modules and can use them to download user photos, the final step is to integrate that process with the database. Luckily, the interface for this is already present (with the upload_module route).
+
+**Deliverables:**
+- [x] Interface the Facebook module with the upload_module route
+- [x] Interface the Instagram module with the upload_module route
+
+**Testing Criteria:**
+
+The images retrieved by the Fb/Ig modules will be visible in the database, and can be retrieved & processed via the 'retrieve' route.
+"
+29,Create an optional data scraping module to collect photos,closed,,BTS630 - Sprint 3,akitak1290,akitak1290,akitak1290,2021-02-26T15:12:36Z,2021-03-19T16:57:13Z,2021-03-19T16:57:12Z,"**User story:**
+
+This will be a pure back-end operation and will not involve any user-related activity.
+
+**Description:**
+
+Continue from the possible problem stated in [issues 28](https://github.com/SenecaCollegeBTSProjects/Group_07/issues/28), the training dataset for a user might require more photos besides the one found on their profile page. If so, we can try to scrape for their photos from their friends' pages
+
+**Acceptance Criteria:**
+
+- [ ] Create 2 new tester accounts populated with sample photos.
+- [ ] Register the 2 accounts with the app and add them along with the previous test account as friends.
+- [ ] Query an account's friend list and get the other ones' ids.
+- [ ] Query photos from the friends of the account.
+
+**Testing:**
+
+Query photos from the friends of the account."
+28,Testing on opencv - minimal threshold for the training dataset,closed,,BTS630 - Sprint 3,akitak1290,akitak1290,akitak1290,2021-02-26T14:12:07Z,2021-03-19T16:56:11Z,2021-03-19T16:56:11Z,"**User story:**
+
+This will be a pure back-end operation and will not involve any user-related activity.
+
+**Description:**
+
+Realistically, users of the site will have a finite number of their photos, unlike with the samples tested so far. To ensure the best quality of face detection/ face recognition functions, we would want to know what is the minimal threshold of the photo a user would need to feed the classifier so it can distinguish their face from others. 
+
+**Acceptance Criteria:**
+
+- [x] Find the minimal threshold for the training dataset so the classifier can function.
+- [x] Find the acceptable threshold to balance the quality of the recognition model against the quantity of the preprocessed photos.
+
+**Testing:**
+
+- Conduct a survey on a small sample of Facebook user based on the [age distribution](https://www.statista.com/statistics/863754/facebook-user-share-in-canada-by-age/#:~:text=As%20of%20the%20measured%20period,13%20and%2017%20years%20old.).
+- Continuously increase the number of photos to process from 1 to 20.
+- With each incrementation, run the model to match against 5 photos with the person's faces."
+27,Rudimentary tagging system ,closed,,BTS630 - Sprint 3,y-ismail,y-ismail,y-ismail,2021-02-25T19:23:25Z,2021-03-19T16:44:46Z,2021-03-19T16:44:46Z,"**User Story**
+The user will see a clickable box on the faces in the image that will direct them to that users profile.
+
+**Description**
+The faces that are detected in the image will generate a link to that users profile (if they have one).
+
+**Acceptance Criteria**
+A clickable box that will show the name of the face that was detected.
+
+**Testing**
+* Generate boxes around every face detected in the image
+* Create a link to the profile of that user if the user exists in the system
+
+**Deliverables**
+
+- [x] A rudimentary tagging system that tags all face detections with a link"
+26,Facebook and Instagram integration to the UI & Front end deployment to Heroku,closed,,BTS630 - Sprint 3,y-ismail,y-ismail,y-ismail,2021-02-25T19:13:51Z,2021-03-19T18:45:22Z,2021-03-19T16:46:05Z,"**User Story**
+The user will be able to access their Facebook and Instagram through a link in the UI.
+
+**Description**
+The user will be able to connect to their Facebook and Instagram accounts through the UI instead of the server based webpage, in order to accomplish this the front end UI we have would need to be deployed to Heroku so that the Facebook and Instagram APIs function as expected.
+
+**Acceptance Criteria**
+The links to Facebook and Instagram are in the UI and the user is able to log in and see their respective photos.
+
+**Testing**
+* Make sure the user is able to access the accounts on Facebook and Instagram
+* Be able to see the correct output from the APIs once logged in
+* Make changes as necessary
+
+**Deliverables**
+
+- [ ] Front end deployed to Heroku  
+- [x] Facebook and Instagram integration to the front end interface
+
+"
+25,"Face recognition demo module using developed face detection module, dilb, and opencv.",closed,,BTS630 - Sprint 2,akitak1290,akitak1290,akitak1290,2021-02-05T15:30:46Z,2021-02-19T19:09:03Z,2021-02-19T19:08:03Z,"User Story
+This will be a pure back-end operation and will not involve any user-related activity.
+
+Description
+The idea of this sprint is to use dilb, a trained deep matrix facial embedding network and the face detection module done by @y-ismail to extract vectors from each photo from the dataset to start to categorize faces. The vectors will then be used by Dlib and deep learning to recognized categorized faces in pictures. 
+The main goal is to create a working module to demo the face recognition function using a pre-trained model. 
+
+Acceptance Criteria
+
+- [x] The module will produce a file containing the vectors generated from a set of faces.  
+- [x] Some successful result of correctly identifying people's name from their photos.
+
+Testing
+Use photos from recognized people with each having minimally 15-20 photos.
+Generate embedding vectors for each face.
+Store their names in a  list for later processing.
+Try to match faces with names.
+"
+24,Heroku Deployment & Module Integration,closed,,BTS630 - Sprint 2,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-02-05T05:55:06Z,2021-02-19T19:52:50Z,2021-02-19T19:52:50Z,"**User Story**
+This will be a purely back-end operation and will not involve any user related activity. However, the server will be deployed and available for non-local testing.
+
+**Description**
+Building on the work done during the previous sprint, the goal of this issue is to integrate the Facebook & Instagram server modules developed by Kien. To this end, the server must be deployed remotely in order to fulfill certain requirements set by the Facebook & Instagram APIs being used. Therefore, this issue will encapsule deployment of the server in it's current state to Heroku, and following that the integration of the modules.
+
+**Acceptance Criteria**
+The server will be deployed remotely, and the modules for Facebook & Instagram image retrieval will be tested on that remote server. 
+
+**Testing**
+- Connect a local instance of the front-end application to the remote server, and ensure appropriate output
+- Test the Facebook module, mimicking the output from the previous sprint
+- Test the Instagram module, mimicking the output from the previous sprint
+
+**Deliverables**
+
+- [x] Deploy the server to Heroku
+- [x] Integrate the Facebook module, and re-deploy to Heroku
+- [x] Integrate the Instagram module, and re-deploy to Heroku
+"
+23,Face normalization,closed,,BTS630 - Sprint 2,y-ismail,y-ismail,y-ismail,2021-02-04T17:45:28Z,2021-02-19T17:52:17Z,2021-02-19T17:52:17Z,"**User Story**
+This will be a purely back-end operation and will not involve any user related activity.
+
+**Description**
+The next step after face detection, normalizing faces will aid in the accuracy of the recognition model. Detected faces will be transformed so that all faces and their features will be at a consistent orientation and scale.
+
+**Acceptance Criteria**
+All faces detected and normalized will maintain a consistent orientation and scale. 
+
+_Disclaimer_: _Since some faces will be at extreme angles (such as a full profile to the camera) some normalizations will not be accurate._
+
+
+**Testing**
+- Use several images with faces detected
+- Normalize image of the face
+- Make sure all the images share a consistent orientation and scale
+- Make changes as necessary
+
+**Deliverables**
+
+- [x] Normalized images of detected faces showing consistent orientation and scale
+"
+22,Serverside modification of upload route & new upload routes,closed,,BTS630 - Sprint 1,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-01-15T19:56:34Z,2021-01-29T19:46:55Z,2021-01-29T19:46:55Z,"**User Story:**
+
+The user can upload images to the database which will not be processed on upload, and instead will be processed when requested.
+
+**Description:**
+
+When using the facebook/instagram modules, the server is likely going to be presented with large quantities of images. Pushing all these images to the database after processing will lead to slowdown, so I will be implementing a separate route for this case. This route will upload the image to the db and associate it with the user, but not process it. I will collaborate with Yumit in the future to design an on-demand processing via the front-end.
+
+**Acceptance Criteria:**
+
+Images can be uploaded to the database via an alternate route. When these images are requested, the server will detect that they have not been processed, and process them on-demand.
+
+**Deliverables:**
+- [x] Provide a route to upload an image without processing
+- [ ] Modify the implementation of the facebook/instagram modules to use this route
+- [x] Provide a test case in which these images are retrieved from the database & processed on-demand
+
+**Testing Criteria:**
+
+The response will be evaluated for a correct result.
+The database will be examined to determine that images without processing can be uploaded.
+The database will be examined to show the on-demand processing function."
+21,Fixing bugs and intergrating Fb and Instg modules ,closed,,BTS630 - Sprint 1,akitak1290,akitak1290,akitak1290,2021-01-15T18:48:12Z,2021-01-29T19:49:34Z,2021-01-29T19:49:34Z,"**User story**
+User can access and use their photos from Facebook and Instagram account to work with our application. The photo will be fetched automatically after the user has provided proper authentication. Users can see metadata about each photo as well as their account. After they have finished with the app, they can choose to logout from their Facebook accounts.
+
+**Deliverable**
+Assisting Ben with integrating the modules.
+Fixing possible bugs and adding feature post-integration
+
+- [x] Add method to disconnect the accounts from the app
+- [x] Add separate routes to display user information
+- [x] Change from using a short-lived token to a long-lived token
+- [x] Add a method to get albums cover photo
+
+**Acceptance criteria**
+
+- User should be able to connect to their Facebook accounts seamlessly.
+- The module should report back the appropriate error from the login process.
+- User should be able to disconnect their account with the application (logging out).
+
+**Testing**
+
+- Login attempts will be made with the right credential.
+- Login attempts will be made with the wrong credential."
+20,Serverside implementation of facebook/instagram modules,closed,,BTS630 - Sprint 1,benwhitecoop2,benwhitecoop2,benwhitecoop2,2021-01-14T18:27:08Z,2021-01-29T19:47:00Z,2021-01-29T19:47:00Z,"**User Story:**
+
+The user can provide a facebook/instagram link and automatically retrieve images from that link.
+
+**Description:**
+
+When using our app, the user can provide access to their instagram/facebook account in order to gather images which they have uploaded there automatically.
+
+**Deliverables:**
+- [x] Provide a route to access the functionality provided by Kien's modules
+- [ ] Test Kien's modules as they currently are implemented, ensure appropriate output
+- [ ] Provide a response via postman (which will eventually be sent to the front-end)
+
+**Testing Criteria:**
+
+The processed link returns a response containing the number of images gathered, and each image is uploaded to the database.
+
+**Extra Comments:**
+
+After this issue, it would be appropriate to implement insertion of the downloaded images into the database and associate those images with the user.
+
+Another thing worth noting is perhaps implementing a way in which the user can provide an image to the server, and associate it with their account, but not do processing immediately. This will hopefully reduce the load on the server (since we do not want to perform batch recognition on the large amount of images provided by these modules, it would be a better solution to process each image on-demand). Will have to discuss this with the group & determine the appropriate approach."
+19,Custom face detection model,closed,,BTS630 - Sprint 1,y-ismail,y-ismail,y-ismail,2021-01-14T17:05:12Z,2021-01-29T19:42:37Z,2021-01-29T19:42:37Z,"**User story**
+Can see all the faces included in the image without excluding a participant.
+
+**Description**
+This is the continuation of the problem we've been having with tilted faces. In the last meeting I suggested we create our
+own model for face detection to create a more reliable solution to our problem, so I will work to get that solution working in this first sprint.
+
+**Acceptance Criteria**
+The processed image shows all faces in the image, no matter the angle of the face relative to the camera.
+
+**Testing**
+
+- Using several images of people with faces at an angle relative to the camera.
+- Ensuring all faces are detected as expected.
+- Adjust parameters otherwise.
+
+**Deliverables:**
+
+~~Custom face detection model for our purposes using the OpenCV modeling tools.~~
+- [x] Demo of the model that will capture tilted faces in uploaded photos.
+- [x] Show the data retrieved from the image"
+18,Dataset Collection,closed,,BTS630 - Sprint 4,benwhitecoop2,akitak1290,"akitak1290,benwhitecoop2,y-ismail",2020-11-25T20:36:59Z,2020-12-09T20:52:55Z,2020-12-09T20:52:55Z,"This sprint, the group will be collaborating on the dataset. We will begin assembling the dataset for our facial recognition model.
+
+- [x] Gather images for dataset"
+17,Kien - Adding a temporary website for the facebook and instagram modules,closed,,BTS630 - Sprint 4,akitak1290,akitak1290,akitak1290,2020-11-25T19:38:37Z,2020-12-09T20:38:36Z,2020-12-09T20:38:36Z,- [x] Create a GitHub Pages website for the Facebook API login dialog to redirect to 
+16,Kien - Adding Instagram module,closed,,BTS630 - Sprint 4,akitak1290,akitak1290,akitak1290,2020-11-25T19:35:35Z,2020-12-09T20:38:28Z,2020-12-09T20:38:28Z,"- [x] Create a Facebook app for the module.
+- [x] Add an Instagram test user account.
+- [x] Authenticate the test user and get the authorization code.
+- [x] Exchange the code for the access token.
+- [x] Query user data.
+- [x] Expose function to get all public photos from the user account."
+15,Yumit - UI Elements,closed,,BTS630 - Sprint 4,y-ismail,y-ismail,y-ismail,2020-11-25T18:40:09Z,2020-12-09T20:37:29Z,2020-12-09T20:37:29Z,"Continue work on the UI elements from sprint 2.
+
+**Deliverables:**
+- [x] Add menu system to UI 
+- [x] Create icons for Home, Owned, Tagged, Profile, and Settings links.
+- [x] Remove secondary nav bar and reposition necessary links to main nav bar"
+14,Yumit - Tilted head face detection,closed,,BTS630 - Sprint 4,y-ismail,y-ismail,y-ismail,2020-11-25T18:34:58Z,2020-12-09T20:37:23Z,2020-12-09T20:37:23Z,"Fix the issue with the detection system not detecting faces that are not at a right angle.
+
+**Deliverables:**
+
+- [x] Same photos we have been using of the group of people but with detection on those with angled faces towards the camera. "
+13,Ben - Database Modification,closed,,BTS630 - Sprint 4,benwhitecoop2,benwhitecoop2,benwhitecoop2,2020-11-25T18:03:02Z,2020-12-07T17:25:40Z,2020-12-07T17:25:40Z,"Modify the database to permit more discrete data loading. The current setup stores image data, preprocessing, and postprocessing all in one table. This requires the server to load 2x the size of the image just to access the image data - this can be improved.
+
+- [x] Create img_data table
+- [x] Create img_preprocessing table
+- [x] Create img_postprocessing table
+- [x] Add CRUD functions to the server which will interface with the new tables
+- [x] Modify current database /upload and /retrieve routes to function with the new queries"
+12,Ben - Server Unification,closed,,BTS630 - Sprint 4,benwhitecoop2,benwhitecoop2,benwhitecoop2,2020-11-25T18:00:36Z,2020-12-09T20:53:03Z,2020-12-09T20:53:03Z,"Merge all available server modules into one package
+
+**Deliverables:**
+- [x] Merge Kien's server modules to the Sprint 3 server
+- [x] Interface the merged server with Yumit's sprint 3 UI "
+11,Kien - Sprint 3,closed,,Sprint 3,akitak1290,,,2020-11-04T18:51:13Z,2020-11-18T19:09:39Z,2020-11-18T19:09:39Z,"For this sprint, I will continue to work on the Facebook API and create another module for the Instagram API
+
+- [x] Setup Facebook authentication through the app to get user token
+- [x] Expose functions for getting all photo albums and getting all photos from an album
+- [ ] Setup another module for Instagram
+- [x] Integrate the 2 modules to the server"
+10,Ben - Sprint 3 - Database,closed,,Sprint 3,benwhitecoop2,benwhitecoop2,benwhitecoop2,2020-11-04T18:48:22Z,2020-11-18T19:00:14Z,2020-11-18T18:59:24Z,"Create and configure the database to enable the server from sprint 2 to be deployed.
+
+**Please note** that Yumit is also working with the server from sprint 2 this week - I will be communicating with him regarding requirements for the database tables and necessary functions for the web interface.
+
+**Deliverables:**
+- [x] Configured MongoDB database
+- [x] Images table for pre and post processing image storage, Create Retrieve and Delete functions
+- [x] Users table for registration and login
+- [x] Modification of server to connect to and retrieve data from the db
+- [x] Modification of server /upload route to parse image and store 
+- [x] Modification of server /retrieve route to retrieve image from db instead of server processing folder"
+9,Yumit - Sprint 3,closed,,Sprint 3,y-ismail,,,2020-11-04T17:37:26Z,2020-11-18T17:57:15Z,2020-11-18T17:57:15Z,"Connect to the server provided by Ben from sprint 2, and modify the web interface to upload images to the server.
+
+**Deliverables:**
+The interface from sprint 2 with the user functionality that also includes:
+- [x] Ability to upload images to the server.
+- [x] Retrieve images from the server.
+- [x] Display the processed image on a users page.
+- [x] Refine the user interface
+
+
+
+"
+8,Kien - Sprint 2,closed,,,akitak1290,,,2020-10-07T19:39:44Z,2020-10-21T19:54:28Z,2020-10-21T19:54:28Z,"A mock python server to setup connection with Facebook Graph API. The goal of this sprint is to get photos from social medial sites through their public APIs.
+
+**Deliverables:**
+- [x] Create a functional server
+
+- [x] Setup functions to process and store the returned 
+
+- [x] Setup connection to a Facebook user account
+
+- [ ] Upload processed photo to a mongodb datatbase"
+7,Ben - Sprint 2 - Server Creation,closed,,,benwhitecoop2,,,2020-10-07T19:31:27Z,2020-11-04T20:49:39Z,2020-10-21T19:44:29Z,"Create and configure a Python server to host the neural network. The goal of this server is to offload the processing portion from the browser to a separate machine or service, and prevent the user's machine from performing this processing.
+
+**Deliverables:**
+
+- [x] Functional Python server
+- [x] Provide an exposed port where images can be uploaded (for now, this will be done via postman)
+- [x] Load and utilize the neural network
+- [x] Perform the processing presented during the week 1 sprint without utilizing the browser
+- [x] Return the result of the processing to the user (also for now, this will be viewed via postman)"
+6,Yumit - Sprint 2,closed,,,y-ismail,,,2020-10-07T17:37:59Z,2020-10-21T19:53:55Z,2020-10-21T19:53:55Z,"Configure the layout/design of the webpage, user profile, and user authentication page.
+
+**Deliverables:**
+
+A webpage using the Django framework that will include:
+- [x]  Home page that shows rows of public images
+- [x]  A page where user owned images will be placed
+- [x]  A page where tagged images will be placed
+- [x]  Profile page where the user can change their profile picture and other settings
+- [x]  A Sign up/ Sign in page
+"
+5,Planning 1,closed,,,y-ismail,,,2020-09-18T17:44:38Z,2020-09-30T19:56:40Z,2020-09-30T19:56:40Z,"The main aspect the application is the face detection/recognition. 
+
+- Start writing up the facial detection portion of the application.
+    - It will detect faces of individuals in an image, including solo individuals and ones in a group setting.
+
+Deliverables:
+    A simple web application utilizing OpenCV and Django libraries to display an image before and after detecting faces.
+    Since this is a simple testing style application for face detection, there will be no use of a database to pull images from, 
+    this is only testing the face detection code itself.
+    - Before Image
+        - Shows the raw image file without any alteration from the source.
+        - The images will include individuals as well as groups of people.
+    - After Image
+        - Showing the same image file after face detection with borders around the faces that were detected.
+        - Lists the total number of faces found in the image
+ 
+"
+4,Technical Details,closed,,,marceljar,,,2020-08-14T14:56:30Z,2020-08-18T16:33:18Z,2020-08-18T16:33:18Z,"See assignment on Blackboard. Due on Tuesday, August 18th, at noon."
+3,Use Cases,closed,,,marceljar,akitak1290,"akitak1290,y-ismail",2020-07-31T15:12:53Z,2020-08-17T18:13:22Z,2020-08-17T18:13:22Z,"- Use case for the Local photo finding tool
+- Use case for the Online photo finding tool
+- Use Case for the automatic tagging
+- Authentication"
+2,Project Description,closed,,,marceljar,akitak1290,"akitak1290,y-ismail",2020-07-17T14:59:24Z,2020-08-17T18:13:31Z,2020-08-17T18:13:31Z,"This idea could lead to a very interesting CAPSTONE project. The focus should probably be on first understanding how OpenCV works. Then, creating a system in which the user can try to see if a person from a particular photo can be found in other photos in a local database, or from online databases accessible via APIs. Users should require to login in order to use the system."
+1,Added info about Kien,closed,,,akitak1290,akitak1290,akitak1290,2020-07-12T01:43:35Z,2020-07-12T01:45:59Z,2020-07-12T01:45:59Z,

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FacebookAlbums</title>
+</head>
+<body>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    <div>
+        {% for item in dic %}
+        <img src={{dic[item]['cover_url']}} name={{item}} alt="photo">
+        <a href="{{ url_for('display_album_fb', albumid=dic[item]['id']) }}">{{item}}</a>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "demo/base.html" %}
+{% block style %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'demo/home.css' %}?91">
+    <title>Demo Home</title>
+{% endblock style %}
+{% block content %}
+    <div class="main-frame">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col img-raw">
+                        {% block raw %}
+            
+                            <ul class="before-list">
+                                Before
+                                <hr>
+                                <li>Raw image file</li>
+                                <li>No alterations from the source</li>
+                            </ul>
+                           
+                        {% endblock raw %}
+                    </div>
+                    <div class="col img-alt">
+                        {% block alt %}
+                            
+                            <ul class="after-list">
+                                After
+                                <hr>
+                                <li>Altered image showing boxes around faces</li>
+                                <li>Showing total number of faces found in the side bar</li>
+                            </ul>
+                            
+                        {% endblock alt %}
+                    </div>   
+                </div>
+                {% block next_link %}
+                    <a href="/1" class="btn btn-primary">Begin</a>
+                {% endblock next_link %}
+            </div>
+            <div class="col-md-3">
+                {% block num %}{% endblock num %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
